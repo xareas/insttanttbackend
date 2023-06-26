@@ -1,4 +1,5 @@
 using FluentValidation;
+using Insttantt.Workflow.Core;
 using Insttantt.Workflow.CQRServices.Field;
 using Insttantt.Workflow.EndPointApi.Infraestructure;
 using Insttantt.Workflow.Persistence.EntityFramework;
@@ -34,6 +35,9 @@ ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("es");
 builder.Services.AddValidatorsFromAssembly(typeof(FieldRules).Assembly);
 //builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUpdateFieldHandler).Assembly));
+
+//Servicios de Workflow Core
+builder.Services.AddTransient<IWorkflowBuilder, WorkflowBuilder>();
 
 var app = builder.Build();
 

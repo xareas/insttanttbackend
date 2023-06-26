@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Insttantt.Persistence.Repositories\Insttantt.Workflow.Persistence.Repositories.csproj" />
+    <ProjectReference Include="..\Insttantt.Workflow.Core\Insttantt.Workflow.Core.csproj" />
     <ProjectReference Include="..\Insttantt.Workflow.CQRServices\Insttantt.Workflow.CQRServices.csproj" />
     <ProjectReference Include="..\Insttantt.Workflow.Dtos\Insttantt.Workflow.Dtos.csproj" />
     <ProjectReference Include="..\Insttantt.Workflow.Models\Insttantt.Workflow.Models.csproj" />

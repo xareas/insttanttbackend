@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Insttantt.Persistence.Repositories\Insttantt.Workflow.Persistence.Repositories.csproj" />
+    <ProjectReference Include="..\Insttantt.Workflow.Dtos\Insttantt.Workflow.Dtos.csproj" />
+    <ProjectReference Include="..\Insttantt.Workflow.Models\Insttantt.Workflow.Models.csproj" />
+  </ItemGroup>
+
 </Project>

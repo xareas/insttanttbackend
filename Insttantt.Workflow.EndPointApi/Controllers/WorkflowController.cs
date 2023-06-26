@@ -43,6 +43,23 @@ public class WorkflowController : BaseController<WorkflowDto, int>
     }
 
     [HttpPost]
+    [Route("AddStep")]
+    public async Task<WorkflowStepDto> InsertOrEdit(WorkflowStepDto input)
+    {
+        var data = await Mediator.Send(new AddWorkflowStep(input));
+        return data;
+    }
+
+    [HttpPost]
+    [Route("AddStepField")]
+    public async Task<WorkflowStepFieldDto> InsertOrEdit(WorkflowStepFieldDto input)
+    {
+        var data = await Mediator.Send(new AddWorkflowStepField(input));
+        return data;
+    }
+
+
+    [HttpPost]
     [Route("Delete")]
     public override async Task<OkResult> Delete(EntityDto<int> input)
     {
