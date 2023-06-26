@@ -4,6 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Insttantt.Workflow.Core
 {
+     /// <summary>
+     /// todo: No se pudo concluir el workflow con manejos de estados.
+     /// Sorry.
+     /// </summary>
     public class WorkflowBuilder : IWorkflowBuilder
     {
         public IServiceProvider Provider { get; }
